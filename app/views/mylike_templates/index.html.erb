@@ -1,0 +1,22 @@
+<h1>
+  My Likes
+</h1>
+
+<!--<a href="/users/new">-->
+<!--  Add a new user-->
+<!--</a>-->
+
+<hr>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Liked Photos
+  </div>
+  <% current_user.liked_photos.each do |photo| %>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+      <img src="<%= photo.image %>">
+      </li>
+    </ul>
+  <% end %>
+</div>
